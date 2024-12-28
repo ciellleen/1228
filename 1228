@@ -1,0 +1,130 @@
+# 1. sizeof 연산자 이해하기
+
+## 문제 : 문자형, 정수형, 실수형이 차지하는 메모리의 크기를 출력하는 프로그램을 작성하세요.
+
+```c
+#include <stdio.h>
+
+int main() 
+{
+    printf("문자형(char)의 크기: %zu 바이트\n", sizeof(char));
+    printf("정수형(int)의 크기: %zu 바이트\n", sizeof(int));
+    printf("실수형(float)의 크기: %zu 바이트\n", sizeof(float));
+    return 0;
+}
+```
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/43f4c680-a7ab-4f2d-b233-d37ec40472ce/6106e5c2-87b1-4aca-a909-a76b9c0ee0ea/image.png)
+
+# 2. 중첩 조건문 이해하기(if~else)
+
+## 문제 : 정수형 변수 i, j, k를 정의하고 각각을 1, 2, 7로 초기화하세요. 그리고 i의 값이 1이고 j의 값이 2일 때, k의 값이 3인 경우와  k의 값이 4인 경우, 그리고 k의 값이 5인 경우에 따라 각각 i, j, k를 출력하고, k의 값이 3,4,5가 아닌 경우 i, j, k의 값을 출력하는 프로그램을 작성하세요.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    // 변수 초기화
+    int i = 1;
+    int j = 2;
+    int k = 7;
+    
+    if (i == 1) 
+    {
+        if (j == 2) 
+        {
+            if (k == 3) 
+            {
+                printf("k가 3일 때:\n");
+                printf("i의 값: %d\n", i);
+                printf("j의 값: %d\n", j);
+                printf("k의 값: %d\n", k);
+            }
+            else if (k == 4) 
+            {
+                printf("k가 4일 때:\n");
+                printf("i의 값: %d\n", i);
+                printf("j의 값: %d\n", j);
+                printf("k의 값: %d\n", k);
+            }
+            else if (k == 5)
+            {
+                printf("k가 5일 때:\n");
+                printf("i의 값: %d\n", i);
+                printf("j의 값: %d\n", j);
+                printf("k의 값: %d\n", k);
+            }
+            else 
+            {
+                printf("k가 3, 4, 5가 아닐 때:\n");
+                printf("i의 값: %d\n", i);
+                printf("j의 값: %d\n", j);
+                printf("k의 값: %d\n", k);
+            }
+        }
+    }
+    return 0;
+}
+```
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/43f4c680-a7ab-4f2d-b233-d37ec40472ce/9113a6a4-cc84-407b-ba32-67e0f9b72182/image.png)
+
+# 3.  아스키(ASCII)문자를 출력하는 프로그램을 작성하세요.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    for (int code = 0; code <= 127; code++)
+    {
+        printf("ASCII 코드: <%3d>, 문자: '%c'\n", code, code);
+    }
+
+    return 0;
+}
+
+```
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/43f4c680-a7ab-4f2d-b233-d37ec40472ce/1e368a1f-fee7-4016-a8a8-54b31fef8eaa/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/43f4c680-a7ab-4f2d-b233-d37ec40472ce/07d2af5c-a62a-4662-87cf-1d0cb05fb922/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/43f4c680-a7ab-4f2d-b233-d37ec40472ce/64790f6c-a3f3-46eb-9c44-029213100cdf/image.png)
+
+# 4. 메모리 이해하기
+
+## 문제 : 변수 i, j, k를 정의하고, 각 변수가 위치한 메모리 주소를 출력하는 프로그램을 작성하세요.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    // 변수 선언
+    int i, j, k;
+
+    // 입력
+    printf("i 값을 입력하세요: ");
+    scanf_s("%d", &i);
+
+    printf("j 값을 입력하세요: ");
+    scanf_s("%d", &j);
+
+    printf("k 값을 입력하세요: ");
+    scanf_s("%d", &k);
+
+    // 변수 값과 메모리 주소 출력
+    printf("i의 값: %d, i의 메모리 주소: %p\n", i, (void*)&i);
+    printf("j의 값: %d, j의 메모리 주소: %p\n", j, (void*)&j);
+    printf("k의 값: %d, k의 메모리 주소: %p\n", k, (void*)&k);
+
+    return 0;
+}
+
+```
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/43f4c680-a7ab-4f2d-b233-d37ec40472ce/745f1707-cbfc-485c-8449-bbd14b9dd730/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/43f4c680-a7ab-4f2d-b233-d37ec40472ce/3d150374-3792-4538-a513-9e5ece8514c0/image.png)
